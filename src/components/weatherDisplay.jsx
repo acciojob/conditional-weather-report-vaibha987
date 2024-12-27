@@ -1,20 +1,19 @@
 import React from "react";
 
 const WeatherDisplay = ({ weather }) => {
-  // Destructuring the props
   const { temperature, conditions } = weather;
 
-  // Conditional styling for temperature
-  const tempStyle = {
-    color: temperature > 20 ? "red" : "blue",
-    fontWeight: "bold",
-    fontSize: "24px",
-  };
+  // Dynamic color styling for the temperature
+  const tempColor = temperature > 20 ? "red" : "blue";
 
   return (
     <div>
-      <p style={tempStyle}>Temperature: {temperature}</p>
-      <span>Conditions: {conditions}</span>
+      <p>
+        <span style={{ color: tempColor, fontWeight: "bold", fontSize: "24px" }}>
+          Temperature: {temperature}
+        </span>
+      </p>
+      <p>Conditions: {conditions}</p>
     </div>
   );
 };
