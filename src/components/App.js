@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import WeatherDisplay from "./components/weatherDisplay";
+import WeatherDisplay from "./weatherDisplay";
 
 const App = () => {
   // State to store weather data
